@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="3.2" client="site" method="upgrade">
+    <name>Domain Finder</name>
+    <author>Creative Pulse</author>
+    <creationDate>October 2013</creationDate>
+    <copyright>(C)2011-2013 Creative Pulse. All rights reserved.</copyright>
+    <license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+    <authorEmail>joomla.support@creativepulse.gr</authorEmail>
+    <authorUrl>www.creativepulse.gr</authorUrl>
+    <version>1.1</version>
+    <description>Domain Finder looks up domain names for availability and information</description>
+
+    <languages>
+        <language tag="en-GB">en-GB.mod_domainfinder.ini</language>
+        <language tag="el-GR">el-GR.mod_domainfinder.ini</language>
+    </languages>
+
+    <files>
+        <filename module="mod_domainfinder">mod_domainfinder.php</filename>
+        <filename>mod_domainfinder.xml</filename>
+        <filename>data.inc.php</filename>
+        <filename>data.php</filename>
+        <filename>helper.php</filename>
+        <filename>index.html</filename>
+        <filename>info.php</filename>
+        <filename>search.php</filename>
+        <folder>js</folder>
+        <folder>tmpl</folder>
+        <folder>css</folder>
+    </files>
+
+    <config>
+        <fields name="params">
+            <fieldset name="basic">
+                <field name="tlds" type="textarea" rows="6" cols="20" default="" label="TLDs" description="Top level domains you want your users to include in their search. A starting minus sign (-) makes a TLD disabled by default. Example: com, -net, -co.uk -- IMPORTANT: Enter one TLD in each line" />
+                <field name="layout" type="list" default="default" label="Layout" description="The layout viewer mechanism for the module. The layouts Custom1-5 are placeholders for custom made layouts through the template.">
+                    <option value="default">Default</option>
+                    <option value="custom1">Custom 1</option>
+                    <option value="custom2">Custom 2</option>
+                    <option value="custom3">Custom 3</option>
+                    <option value="custom4">Custom 4</option>
+                    <option value="custom5">Custom 5</option>
+                </field>
+                <field name="moduleclass_sfx" type="text" default="" label="Module Class Suffix" description="PARAMMODULECLASSSUFFIX" />
+            </fieldset>
+
+            <fieldset name="advanced">
+                <field name="cache" type="list" default="0" label="Caching" description="Select whether to cache the content of this module">
+                    <option value="1">Use global</option>
+                    <option value="0">No caching</option>
+                </field>
+                <field name="cache_time" type="text" default="900" label="Cache Time" description="The time before the module is recached" />
+            </fieldset>
+        </fields>
+    </config>
+
+</extension>
