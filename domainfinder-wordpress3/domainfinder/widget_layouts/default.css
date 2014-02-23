@@ -1,0 +1,97 @@
+
+/**
+ * Domain Finder
+ *
+ * @version 1.2
+ * @author Creative Pulse
+ * @copyright Creative Pulse 2011-2014
+ * @license http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL
+ * @link http://www.creativepulse.gr
+ */
+
+
+.cpwdg_domainfinder_text_prefix {
+	display: inline-block;
+	width: 35px;
+}
+.cpwdg_domainfinder_input_panel input[type=text] {
+	border: 1px solid #ccc;
+	color: #000;
+}
+.cpwdg_domainfinder_tlds {
+	padding-left: 38px;
+}
+.cpwdg_domainfinder_tlds label {
+	display: inline;
+}
+
+.cpwdg_domainfinder_results_title {
+	text-align: left;
+}
+.cpwdg_domainfinder_results_close_button {
+	float: right;
+	cursor: pointer;
+	padding: 5px 10px;
+}
+.cpwdg_domainfinder_results_container {
+	max-height: 200px;
+	overflow: auto;
+	clear: both;
+	margin-top: 20px;
+}
+.cpwdg_domainfinder_result_panel {
+	width: 300px;
+	position: absolute;
+	background-color: #fff;
+	box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.5);
+	border-radius: 6px;
+	padding: 10px;
+}
+.cpwdg_domainfinder_result_panel table, .cpwdg_domainfinder_result_panel td, .cpwdg_domainfinder_result_panel tr {
+	border: none;
+}
+.cpwdg_domainfinder_result_panel td {
+	padding: 0 0 7px 10px;
+	vertical-align: top;
+	font-size: 12px;
+	white-space: nowrap;
+}
+.cpwdg_domainfinder_result_panel td:first-child {
+	padding-left: 0;
+}
+.cpwdg_domainfinder_icon_searching, .cpwdg_domainfinder_icon_available, .cpwdg_domainfinder_icon_unavailable {
+	width: 20px;
+	height: 20px;
+	border-radius: 20px;
+	background-color: #ccc;
+	margin-top: 2px;
+}
+.cpwdg_domainfinder_status_searching, .cpwdg_domainfinder_domain {
+	line-height: 25px;
+	text-align: left;
+}
+.cpwdg_domainfinder_icon_available {
+	background-color: #7ddb95;
+}
+.cpwdg_domainfinder_icon_unavailable {
+	background-color: #dE5d5d;
+}
+
+.cpwdg_domainfinder_icon_remove, .cpwdg_domainfinder_icon_moreinfo {
+	padding: 3px 7px;
+	border: 1px solid #e5e5e5;
+	border-radius: 4px;
+	font-size: 10px;
+	cursor: pointer;
+	text-align: center;
+
+	background: #ffffff; /* Old browsers */
+	background: -moz-linear-gradient(top, #ffffff 0%, #e5e5e5 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(100%,#e5e5e5)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, #ffffff 0%,#e5e5e5 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, #ffffff 0%,#e5e5e5 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, #ffffff 0%,#e5e5e5 100%); /* IE10+ */
+	background: linear-gradient(to bottom, #ffffff 0%,#e5e5e5 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e5e5e5',GradientType=0 ); /* IE6-9 */
+}
+
