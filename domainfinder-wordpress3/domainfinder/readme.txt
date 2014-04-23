@@ -3,8 +3,8 @@ Contributors: Creative Pulse
 Donate link: 
 Tags: domain, search, find, name, register, sidebar, wordpress, free, widget
 Requires at least: 2.8.0
-Tested up to: 3.8.0
-Stable tag: 1.2
+Tested up to: 3.9.0
+Stable tag: 1.3
 License: GPLv2
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -54,6 +54,11 @@ TLD stands for Top Level Domain. It is the final part of a domain name, like for
 No screenshots at this moment
 
 == Changelog ==
+
+= 1.3 =
+* Minor bugfixes
+* Added a Z-Index CSS feature to avoid overlapping panel problems
+* Modernization to match the new features of WordPress 3.9
 
 = 1.2 =
 * Opening version for WordPress

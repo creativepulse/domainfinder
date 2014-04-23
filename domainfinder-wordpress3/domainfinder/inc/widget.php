@@ -3,7 +3,7 @@
 /**
  * Domain Finder
  *
- * @version 1.2
+ * @version 1.3
  * @author Creative Pulse
  * @copyright Creative Pulse 2011-2014
  * @license http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL
@@ -86,6 +86,7 @@ if (!class_exists('CpWidget_DomainFinder')) {
 
 			$this->panel_offset_x = intval(trim($params['panel_offset_x']));
 			$this->panel_offset_y = intval(trim($params['panel_offset_y']));
+			$this->z_index = intval(trim($params['z_index']));
 
 			if ($this->load_libraries('*')) {
 				$dir = dirname(__FILE__);
@@ -108,17 +109,16 @@ document.cpwdg_domainfinder_mhs = "' . $data_manager->start_session() . '";
 
 // process instance
 
-$layout = (string) @$instance['layout'];
-if ($layout == '') {
-	$layout = 'default';
-}
+echo $args['before_widget'];
+echo empty($instance['title']) ? '' : $args['before_title'] . $instance['title'] . $args['after_title'] . "\n";
 
 $widget = CpWidget_DomainFinder::get_model();
 $widget->prepare($instance);
 
-echo $args['before_widget'];
-echo empty($instance['title']) ? '' : $args['before_title'] . $instance['title'] . $args['after_title'] . "\n";
-
+$layout = (string) @$instance['layout'];
+if ($layout == '') {
+	$layout = 'default';
+}
 $layout_filename = $dir . '/widget_layouts/' . $layout . '.php';
 if (strpos($layout, "\0") !== false || strpos($layout, '..') !== false || strpos($layout, ':') !== false || strpos($layout, '/') !== false || strpos($layout, '\\') !== false) {
 	echo __('Invalid layout value') . "\n";

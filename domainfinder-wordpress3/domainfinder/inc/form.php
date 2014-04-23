@@ -3,7 +3,7 @@
 /**
  * Domain Finder
  *
- * @version 1.2
+ * @version 1.3
  * @author Creative Pulse
  * @copyright Creative Pulse 2011-2014
  * @license http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL
@@ -11,7 +11,17 @@
  */
 
 
-$instance = wp_parse_args((array) $instance, array('title' => '', 'tlds' => '', 'layout' => '', 'panel_offset_x' => '', 'panel_offset_y' => ''));
+$instance = wp_parse_args(
+	(array) $instance,
+	array(
+		'title' => '',
+		'tlds' => '',
+		'layout' => '',
+		'panel_offset_x' => '',
+		'panel_offset_y' => '',
+		'z_index' => ''
+	)
+);
 
 $default_name = '';
 $layouts = array();
@@ -45,7 +55,7 @@ if ($default_name) {
 
 echo
 '<p><label for="' . $this->get_field_id('title') . '">' . __('Title') . ':</label>
-	<input class="widefat" id="' . $this->get_field_id('title') . '" name="' . $this->get_field_name('title') . '" type="text" value="' . attribute_escape($instance['title']) . '" />
+	<input class="widefat" id="' . $this->get_field_id('title') . '" name="' . $this->get_field_name('title') . '" type="text" value="' . esc_attr($instance['title']) . '" />
 </p>
 
 <p><label for="' . $this->get_field_id('tlds') . '">' . __('TLDs') . ':</label>
@@ -65,14 +75,17 @@ foreach ($layouts as $layout) {
 echo
 '	</select>
 </p>
-	
-<p>' . __('Panel offset') . ':
-	&nbsp; &nbsp;
-	<label for="' . $this->get_field_id('panel_offset_x') . '">' . __('X') . '</label>
-	<input id="' . $this->get_field_id('panel_offset_x') . '" name="' . $this->get_field_name('panel_offset_x') . '" type="text" value="' . attribute_escape($instance['panel_offset_x']) . '" size="5" />
-	&nbsp; &nbsp;
-	<label for="' . $this->get_field_id('panel_offset_y') . '">' . __('Y') . '</label>
-	<input id="' . $this->get_field_id('panel_offset_y') . '" name="' . $this->get_field_name('panel_offset_y') . '" type="text" value="' . attribute_escape($instance['panel_offset_y']) . '" size="5" />
+
+<p><label for="' . $this->get_field_id('panel_offset_x') . '">' . __('Panel offset X') . ':</label>
+	<input class="widefat" id="' . $this->get_field_id('panel_offset_x') . '" name="' . $this->get_field_name('panel_offset_x') . '" type="text" value="' . esc_attr($instance['panel_offset_x']) . '" />
+</p>
+
+<p><label for="' . $this->get_field_id('panel_offset_y') . '">' . __('Panel offset Y') . ':</label>
+	<input class="widefat" id="' . $this->get_field_id('panel_offset_y') . '" name="' . $this->get_field_name('panel_offset_y') . '" type="text" value="' . esc_attr($instance['panel_offset_y']) . '" />
+</p>
+
+<p><label for="' . $this->get_field_id('z_index') . '">' . __('Z-Index') . ':</label>
+	<input class="widefat" id="' . $this->get_field_id('z_index') . '" name="' . $this->get_field_name('z_index') . '" type="text" value="' . esc_attr($instance['z_index']) . '" />
 </p>
 ';
 

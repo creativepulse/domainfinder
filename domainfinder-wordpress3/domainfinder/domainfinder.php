@@ -3,8 +3,8 @@
 /*
 Plugin Name: Domain Finder
 Plugin URI: http://www.creativepulse.gr/en/appstore/domainfinder
-Version: 1.2
-Description: Touch Menu shows menus compatible to both mouse and touch-screen devices
+Version: 1.3
+Description: Domain Finder searches for domain availability
 License: http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL
 Author: Creative Pulse
 Author URI: http://www.creativepulse.gr
@@ -28,7 +28,7 @@ class CpExt_DomainFinder extends WP_Widget {
 	}
 
 	function update($new_instance, $old_instance) {
-		$fields = array('title', 'tlds', 'layout', 'panel_offset_x', 'panel_offset_y');
+		$fields = array('title', 'tlds', 'layout', 'panel_offset_x', 'panel_offset_y', 'z_index');
 		foreach ($fields as $field) {
 			$old_instance[$field] = $new_instance[$field];
 		}

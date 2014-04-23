@@ -2,7 +2,7 @@
 /**
  * Domain Finder
  *
- * @version 1.2
+ * @version 1.3
  * @author Creative Pulse
  * @copyright Creative Pulse 2011-2014
  * @license http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL
@@ -390,7 +390,6 @@ function CpWdgJs_DomainFinder(iname) {
 		this.data_count = 0;
 	}
 
-//    this.open(); //-*
 }
 
 

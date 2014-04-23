@@ -3,7 +3,7 @@
 /**
  * Domain Finder
  *
- * @version 1.2
+ * @version 1.3
  * @author Creative Pulse
  * @copyright Creative Pulse 2011-2014
  * @license http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL
@@ -51,7 +51,7 @@ document.cpwdg_domainfinder_conf["' . $iname . '"] = {
 ';
 
 echo '
-<div id="' . $iname . '" class="cpwdg_domainfinder">
+<div id="' . $iname . '" class="widget cpwdg_domainfinder">
 	<div id="' . $iname . '_input_panel" class="cpwdg_domainfinder_input_panel">
 		<div class="cpwdg_domainfinder_text_prefix">www.</div>
 		<input type="text" id="' . $iname . '_text" name="' . $iname . '_text" placeholder="' . __('example.com') . '" />
@@ -71,7 +71,7 @@ echo
 		</div>
 	</div>
 	
-	<div id="' . $iname . '_result_panel" class="cpwdg_domainfinder_result_panel" style="display:none">
+	<div id="' . $iname . '_result_panel" class="cpwdg_domainfinder_result_panel" style="display:none;' . ($widget->z_index == 0 ? '' : 'z-index:' . $widget->z_index . ';') . '">
 		<button id="' . $iname . '_close_button" class="cpwdg_domainfinder_results_close_button">' . __('close') . '</button>
 		<div class="cpwdg_domainfinder_results_title">' . __('Search results') . '</div>
 
@@ -80,10 +80,10 @@ echo
 				<tbody id="' . $iname . '_result_items">
 					<tr>
 						<td><div class="cpwdg_domainfinder_icon_searching"></div></td>
-						<td><div class="cpwdg_domainfinder_status_searching">Searching ...</div></td>
+						<td><div class="cpwdg_domainfinder_status_searching">' . __('Searching ...') . '</div></td>
 						<td><div class="cpwdg_domainfinder_domain">example.com</div></td>
 						<td><div class="cpwdg_domainfinder_icon_remove">x</div></td>
-						<td><div class="cpwdg_domainfinder_icon_moreinfo">More info</div></td>
+						<td><div class="cpwdg_domainfinder_icon_moreinfo">' . __('More info') . '</div></td>
 					</tr>
 				</tbody>
 			</table>
